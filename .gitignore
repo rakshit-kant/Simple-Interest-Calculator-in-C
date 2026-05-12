@@ -1,0 +1,5 @@
+# Ignore the specific compiled executable
+main
+
+# Common pattern: ignore all a.out files
+a.out
