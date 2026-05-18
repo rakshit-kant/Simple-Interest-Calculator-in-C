@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-int main(){
-    int choosed_num;
+int main() {
+    int chosen_num;
     double principal;
     double rate_of_interest;
     double raw_time;
@@ -14,34 +14,32 @@ int main(){
     printf("2 -> If you want to give the Answer in Months\n");
     printf("3 -> If you want to give the Answer in Years\n");
     printf("Choose Time Format: ");
-    scanf(" %d", &choosed_num);
-    if (choosed_num == 1){
+    scanf(" %d", &chosen_num);
+    if (chosen_num == 1) {
         printf("Enter the Principle: ");
         scanf(" %lf", &principal);
         printf("Enter the Rate of Interest: (Without %% Sign): ");
         scanf(" %lf", &rate_of_interest);
         printf("Enter the Time (Days): ");
         scanf(" %lf", &raw_time);
-        time = raw_time/365;
-        interest = (principal*rate_of_interest*time)/100;
+        time = raw_time / 365;
+        interest = (principal * rate_of_interest * time) / 100;
         amount = principal + interest;
         printf("Final Amount (along with Interest): %lf\n", amount);
         printf("Interest: %lf\n", interest);
-    }
-    else if (choosed_num == 2){
+    } else if (chosen_num == 2) {
         printf("Enter the Principle: ");
         scanf(" %lf", &principal);
         printf("Enter the Rate of Interest: (Without %% Sign): ");
         scanf(" %lf", &rate_of_interest);
         printf("Enter the Time (Months): ");
         scanf(" %lf", &raw_time);
-        time = raw_time/12;
-        interest = (principal*rate_of_interest*time)/100;
+        time = raw_time / 12;
+        interest = (principal * rate_of_interest * time) / 100;
         amount = principal + interest;
         printf("Final Amount (along with Interest): %lf\n", amount);
         printf("Interest: %lf\n", interest);
-    }
-    else if (choosed_num == 3){
+    } else if (chosen_num == 3) {
         printf("Enter the Principle: ");
         scanf(" %lf", &principal);
         printf("Enter the Rate of Interest: (Without %% Sign): ");
@@ -49,15 +47,13 @@ int main(){
         printf("Enter the Time (Years): ");
         scanf(" %lf", &raw_time);
         time = raw_time;
-        interest = (principal*rate_of_interest*time)/100;
+        interest = (principal * rate_of_interest * time) / 100;
         amount = principal + interest;
         printf("Final Amount (along with Interest): %lf\n", amount);
         printf("Interest: %lf\n", interest);
 
-    }
-    else{
+    } else {
         printf("Invalid Number Chosen!");
-    
     }
     return 0;
 }
