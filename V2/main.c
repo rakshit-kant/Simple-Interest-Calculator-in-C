@@ -20,29 +20,19 @@ FUNCTION DECLARATIONS
 ===========================================
 */
 
-/*
-Convert user-entered time into years
-*/
+// Convert user-entered time into years
 double convert_to_years(int time_format, double unprocessed_time);
 
-/*
-Collect all user input
-*/
+// Collect all user input
 void get_user_input(SimpleInterestCalculator *calc);
 
-/*
-Calculate Interest
-*/
+// Calculate Interest
 void calculate_interest(SimpleInterestCalculator *calc);
 
-/*
-Display Final Result
-*/
+// Display Final Result
 void display_result(const SimpleInterestCalculator *calc);
 
-/*
-Clears Leftover Input
-*/
+// Clears Leftover Input
 void clear_input_buffer(void);
 
 int main(void) {
@@ -88,8 +78,7 @@ double convert_to_years(int time_format, double unprocessed_time) {
 }
 
 void calculate_interest(SimpleInterestCalculator *calc) {
-    calc->interest =
-        (calc->principal * calc->interest_rate * calc->time_years) / 100.0;
+    calc->interest = (calc->principal * calc->interest_rate * calc->time_years) / 100.0;
     calc->final_amount = calc->principal + calc->interest;
 }
 
